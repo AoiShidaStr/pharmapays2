@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="8" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.ProfessionnelController">
+    <Label text="Espace Professionnel" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+    <ListView fx:id="medsList" prefHeight="180" prefWidth="400"/>
+    <VBox spacing="6">
+        <TextField fx:id="nomField" promptText="Nom du médicament"/>
+        <TextField fx:id="formeField" promptText="Forme (ex: comprimé, sirop)"/>
+        <TextField fx:id="voieField" promptText="Voie d'administration (ex: oral, IV)"/>
+        <TextField fx:id="dateAutField" promptText="Date d'autorisation (YYYY-MM-DD)"/>
+        <TextField fx:id="prixField" promptText="Prix"/>
+        <HBox spacing="6">
+            <CheckBox fx:id="generiqueCheckBox" text="Générique?"/>
+            <Button text="Ajouter" onAction="#handleAddMedicament"/>
+        </HBox>
+    </VBox>
+    <HBox spacing="6">
+        <Button text="Modifier le stock" onAction="#handleModifyStock"/>
+        <Button text="Vendre" onAction="#handleVendre"/>
+        <Button text="Se déconnecter" onAction="#handleLogout"/>
+    </HBox>
+</VBox>

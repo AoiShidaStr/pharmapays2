@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="8" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.ProfessionnelController">
+    <Label text="Espace Professionnel" style="-fx-font-size:16px; -fx-font-weight:bold;"/>
+    <ListView fx:id="medsList" prefHeight="180" prefWidth="400"/>
+    <HBox spacing="6">
+        <TextField fx:id="nomField" promptText="Nom"/>
+        <TextField fx:id="prixField" promptText="Prix"/>
+        <TextField fx:id="stockField" promptText="Stock"/>
+        <Button text="Ajouter" onAction="#handleAddMedicament"/>
+    </HBox>
+    <HBox spacing="6">
+        <Button text="Modifier le stock" onAction="#handleModifyStock"/>
+        <Button text="Vendre" onAction="#handleVendre"/>
+        <Button text="Se déconnecter" onAction="#handleLogout"/>
+    </HBox>
+</VBox>

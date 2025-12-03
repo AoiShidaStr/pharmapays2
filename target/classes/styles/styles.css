@@ -1,0 +1,6 @@
+
+.root { -fx-padding: 20; -fx-alignment: center; -fx-background-color: linear-gradient(#f7f9fc, #e9f0f7); }
+.headline { -fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2b6cb0; }
+.label { -fx-font-size: 14px; }
+.button { -fx-background-radius: 8; -fx-padding: 6 12 6 12; }
+.list-cell { -fx-padding: 6; }

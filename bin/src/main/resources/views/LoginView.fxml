@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="12" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.LoginController" styleClass="root">
+    <Label text="Connexion à PharmaPays++" styleClass="headline"/>
+    <TextField fx:id="usernameField" promptText="Nom d'utilisateur"/>
+    <PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+    <HBox spacing="8">
+        <Button text="Se connecter" onAction="#handleLogin"/>
+        <Button text="Créer un compte" onAction="#goToRegister"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" fx:controller="gui.ClientController">
+    <Label fx:id="welcomeLabel" text="Espace Client - Bienvenue" style="-fx-font-size:16px;"/>
+    <ListView fx:id="medsList" prefHeight="200" prefWidth="400"/>
+    <HBox spacing="8">
+        <Button text="Commander un médicament" onAction="#handleCommander"/>
+        <Button text="Contacter le Chatbot" onAction="#handleChatbot"/>
+        <Button text="Se déconnecter" onAction="#handleLogout"/>
+    </HBox>
+</VBox>
