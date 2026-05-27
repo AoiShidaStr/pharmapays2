@@ -1,0 +1,2 @@
+# Bloque tout accès direct au dossier config
+Require all denied

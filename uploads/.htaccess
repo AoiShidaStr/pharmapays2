@@ -1,0 +1,10 @@
+# Empêche l'exécution de scripts dans uploads/ (sécurité)
+<FilesMatch "\.(php|php5|php7|phtml|pl|py|cgi|sh|asp|aspx)$">
+    Require all denied
+</FilesMatch>
+# Autorise le téléchargement/affichage des ordonnances uniquement
+<FilesMatch "\.(pdf|png|jpg|jpeg)$">
+    Require all granted
+</FilesMatch>
+Options -Indexes -ExecCGI
+php_flag engine off

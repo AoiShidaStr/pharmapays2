@@ -1,0 +1,12 @@
+# ── PharmaPays — Sécurité Apache (racine) ──
+Options -Indexes
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+# Bloque l'accès aux fichiers sensibles
+<FilesMatch "\.(sql|md|log|docx)$">
+    Require all denied
+</FilesMatch>
+DirectoryIndex index.html
