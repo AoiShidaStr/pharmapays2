@@ -177,13 +177,14 @@ public class MedicamentDAO {
      * Appelle la procédure stockée sp_maj_stock.
      */
     public boolean majStock(int medicamentId, int nouvelleQuantite) throws SQLException {
-        String sql = "{CALL sp_maj_stock(?, ?)}";
+        String sql = "{CALL sp_maj_stock(?, ?, ?)}";
 
         try (Connection conn = DatabaseConnection.getConnection();
              CallableStatement cs = conn.prepareCall(sql)) {
 
             cs.setInt(1, medicamentId);
             cs.setInt(2, nouvelleQuantite);
+            cs.setString(3, "Mise à jour manuelle (desktop)");
             cs.execute();
             return true;
         }
